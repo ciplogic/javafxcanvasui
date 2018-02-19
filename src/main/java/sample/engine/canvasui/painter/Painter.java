@@ -15,6 +15,10 @@ public class Painter {
 
     public Painter() {
     }
+    public void clear() {
+        _actions.clear();
+    }
+
 
     private void addAction(PainterAction action) {
         _actions.add(action);
@@ -31,10 +35,16 @@ public class Painter {
     public void fillRect(int left, int top, int width, int height) {
         addAction(new FillRectAction(left, top, width, height));
     }
-
-
     public void setFillLinearGradient(Color color1, Color color2) {
         addAction(new FillLinearGradient(color1, color2));
+    }
+
+    public void setDrawText(int x, int y, String text) {
+        addAction(new PaintTextAction(x,y,text));
+    }
+
+    public void setFill(Paint background) {
+        _gc.setFill(background);
     }
 
     public void runActions() {
@@ -43,11 +53,4 @@ public class Painter {
         }
     }
 
-    public void setFill(Paint background) {
-        _gc.setFill(background);
-    }
-
-    public void clear() {
-        _actions.clear();
-    }
 }
