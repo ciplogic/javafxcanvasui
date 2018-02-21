@@ -1,15 +1,16 @@
-package sample.engine.canvasui.painter;
+package sample.engine.canvasui.painter.actions;
 
 import javafx.scene.canvas.GraphicsContext;
+import sample.engine.canvasui.painter.PainterActionSimple;
 
 public class FillRectAction
-        extends PainterActionSimple  {
+        extends PainterActionSimple {
     private int left;
     private int top;
     private int width;
     private int height;
 
-    FillRectAction(int left, int top, int width, int height) {
+    public FillRectAction(int left, int top, int width, int height) {
         super();
         this.left = left;
         this.top = top;

@@ -16,6 +16,7 @@ public class Button
         painter.setFillLinearGradient(Color.BLUE, Color.RED);
         painter.fillRect(_position);
         painter.setFillLinearGradient(Color.WHITE, Color.CORAL);
+        painter.setTextAlign(1);
         painter.setDrawText(_position.getLeft()+10, _position.getTop()+10, "OK");
     }
 }

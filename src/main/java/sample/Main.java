@@ -15,7 +15,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         CanvasScreen drawer = BuildUi.build(primaryStage, 800, 600);
-        Button widget = new Button(20, 30, 300, 200);
+        Button widget = new Button(20, 20, 100, 40);
         drawer.getChildren().add(widget);
         primaryStage.show();
     }

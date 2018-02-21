@@ -1,6 +1,7 @@
-package sample.engine.canvasui.painter;
+package sample.engine.canvasui.painter.actions;
 
 import javafx.scene.canvas.GraphicsContext;
+import sample.engine.canvasui.painter.PainterActionSimple;
 
 public class PaintTextAction extends PainterActionSimple {
     private final int x;

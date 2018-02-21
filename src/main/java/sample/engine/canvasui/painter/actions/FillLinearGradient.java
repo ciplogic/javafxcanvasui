@@ -1,9 +1,11 @@
-package sample.engine.canvasui.painter;
+package sample.engine.canvasui.painter.actions;
 
 import javafx.scene.paint.Color;
 import javafx.scene.paint.CycleMethod;
 import javafx.scene.paint.LinearGradient;
 import javafx.scene.paint.Stop;
+import sample.engine.canvasui.painter.Painter;
+import sample.engine.canvasui.painter.PainterAction;
 
 public class FillLinearGradient extends PainterAction {
     private final Color color1;

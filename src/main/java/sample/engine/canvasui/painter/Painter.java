@@ -3,6 +3,10 @@ package sample.engine.canvasui.painter;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
+import sample.engine.canvasui.painter.actions.FillLinearGradient;
+import sample.engine.canvasui.painter.actions.FillRectAction;
+import sample.engine.canvasui.painter.actions.PaintTextAction;
+import sample.engine.canvasui.painter.actions.TextAlignAction;
 import sample.engine.images.Rect;
 
 import java.util.ArrayList;
@@ -10,7 +14,7 @@ import java.util.List;
 
 public class Painter {
     int _top, _left;
-    GraphicsContext _gc;
+    public GraphicsContext _gc;
     private List<PainterAction> _actions = new ArrayList<>();
 
     public Painter() {
@@ -53,4 +57,13 @@ public class Painter {
         }
     }
 
+    public void setTextAlign(int align) {
+        addAction(new TextAlignAction(align));
+
+    }
+
+    public void setPos(int left, int top) {
+        this._left = left;
+        this._top = top;
+    }
 }
