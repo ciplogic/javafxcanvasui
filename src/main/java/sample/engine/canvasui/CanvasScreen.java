@@ -43,8 +43,8 @@ public class CanvasScreen {
         GraphicsContext gc = _canvas.getGraphicsContext2D();
 
         for (Control widget : _children) {
-            widget.onPaint();
             widget.paint(gc);
+            widget.onPaint();
         }
     }
 }

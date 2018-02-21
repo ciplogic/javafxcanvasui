@@ -11,7 +11,6 @@ public abstract class Control {
     public final void paint(GraphicsContext gc) {
         painter.setGc(gc);
         painter.setPos(_position.getLeft(), _position.getTop());
-        painter.runActions();
     }
 
     public abstract void onPaint();
